@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "last_verified": "2026-01-18T00:00:00Z",
+  "conda": {
+    "base_path": "/home/oy6/miniforge3",
+    "default_environment": "rapids-24.12",
+    "fallback_environments": ["rapids-312", "rapids-24.02"]
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 3080 Ti",
+    "vram_mb": 12288,
+    "driver_version": "591.44",
+    "cuda_version": "13.1"
+  },
+  "environment_variables": {
+    "LD_LIBRARY_PATH": "/usr/lib/wsl/lib",
+    "NUMBA_CUDA_USE_NVIDIA_BINDING": "1",
+    "NUMBA_CUDA_DRIVER": "/usr/lib/wsl/lib/libcuda.so.1",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "CUDF_SPILL": "on",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "gpu_packages": {
+    "cudf": "24.12.0",
+    "cuml": "24.12.0",
+    "cupy": "13.6.0",
+    "xgboost": "2.1.2",
+    "catboost": "1.2.8"
+  },
+  "enforcement": {
+    "gpu_mandatory": true,
+    "no_cpu_fallback": true,
+    "default_trees": 1350,
+    "min_execution_time_seconds": 1.0,
+    "min_memory_delta_bytes": 1048576
+  },
+  "circuit_breaker": {
+    "enabled": true,
+    "max_failures": 3
+  }
+}
